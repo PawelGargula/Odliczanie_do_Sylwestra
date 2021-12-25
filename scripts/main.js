@@ -1,33 +1,31 @@
-let header = document.querySelector('h1');
+// Start timer
+import { timer } from "./timer.js";
 
-let countDownDate = new Date("Jan 1, 2022 00:00:00").getTime();
+import { prev, next, imageIndex, plusImages, showImages } from "./slider.js";
 
-let timer = setInterval(function () {
-    let now = new Date().getTime();
+// Show first image
+showImages(imageIndex);
 
-    let distance = countDownDate - now;
+// Set auto image changing
+let showNextImage = setInterval(() => {
+    plusImages(1);
+}, 5000);
 
-    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+// Change to prev image
+prev.addEventListener("click", () => {
+    plusImages(-1);
+    restartInterval();
+});
 
-    hours = hours.toString().padStart(2, '0');
-    minutes = minutes.toString().padStart(2, '0');
-    seconds = seconds.toString().padStart(2, '0');
+// Change to next image
+next.addEventListener("click", () => {
+    plusImages(1);
+    restartInterval();
+});
 
-    if (days < 1 && hours < 1 && minutes < 1)
-        header.innerText, document.title = seconds;
-    else if (days < 1 && hours < 1)
-        header.innerText = minutes + ":" + seconds;
-    else if (days < 1)
-        header.innerText = hours + ":" + minutes + ":" + seconds;
-    else if (days == 1)
-        header.innerText = days + " dzień | " + hours + ":" + minutes + ":" + seconds;
-    else
-        header.innerText = days + " dni | " + hours + ":" + minutes + ":" + seconds;
-    if (distance < 0) {
-        clearInterval(timer);
-        header.innerText = "Lecymy tur!";
-    }
-}, 1000);
+function restartInterval() {
+    clearInterval(showNextImage);
+    showNextImage = setInterval(() => {
+        plusImages(1);
+    }, 5000);
+}
