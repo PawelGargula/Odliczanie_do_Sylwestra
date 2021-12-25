@@ -1,2 +1,3 @@
 # Odliczanie_do_Sylwestra
-Odliczamy do imperzy sylwestrowej
+Odliczamy do imprezy sylwestrowej
+Licznik do imprezy sylwestrowej + wsponiniania w postaci zdjęć, filmów

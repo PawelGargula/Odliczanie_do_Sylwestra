@@ -1,0 +1,7 @@
+What is about? Licznik do imprezy sylwestrowej + wsponiniania w postaci zdjęć, filmów
+What is looks like? Sticky header + body under it
+Font - google fonts Bangers
+Theme
+Contetnt
+ Gallery of images 
+ Music box
