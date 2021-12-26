@@ -1,8 +1,8 @@
 let header = document.querySelector('h1');
 
-let countDownDate = new Date("Jan 1, 2022 00:00:00").getTime();
+let countDownDate = new Date("Dec 31, 2021 00:00:00").getTime();
 
-export let timer = setInterval(function () {
+let timer = setInterval(function () {
     let now = new Date().getTime();
 
     let distance = countDownDate - now;

@@ -1,13 +1,33 @@
-export let prev = document.querySelector(".prev");
-export let next = document.querySelector(".next");
+let prev = document.querySelector(".prev");
+let next = document.querySelector(".next");
 
-export let imageIndex = 1;
+let imageIndex = 1;
 
-export function plusImages(n) {
+// Show first image
+showImages(imageIndex);
+
+// Set auto image changing
+let showNextImage = setInterval(() => {
+    plusImages(1);
+}, 5000);
+
+// Change to prev image
+prev.addEventListener("click", () => {
+    plusImages(-1);
+    restartInterval();
+});
+
+// Change to next image
+next.addEventListener("click", () => {
+    plusImages(1);
+    restartInterval();
+});
+
+function plusImages(n) {
     showImages(imageIndex += n);
 }
 
-export function showImages(number) {
+function showImages(number) {
     let images = document.querySelectorAll("img");
 
     if (number > images.length)
@@ -21,4 +41,11 @@ export function showImages(number) {
     });
 
     images[imageIndex-1].style.display = "block";  
+}
+
+function restartInterval() {
+    clearInterval(showNextImage);
+    showNextImage = setInterval(() => {
+        plusImages(1);
+    }, 5000);
 }
