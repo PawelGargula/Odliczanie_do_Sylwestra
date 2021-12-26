@@ -55,33 +55,42 @@ h2 {
 }
 
 .block {
-  height: 600px;
-  position: relative;
+  animation: fromLeft 1s ease-in-out;
   background: linear-gradient(
     45deg,
     rgba(233, 30, 99, 0.2) 0%,
     rgba(156, 39, 176, 0.2) 50%,
     rgba(0, 150, 136, 0.2) 100%
   );
+  height: 600px;
   padding: 7px;
-  animation: fromLeft 1s ease-in-out;
+  position: relative;
+  border-radius: 10px;
 }
 
-@keyframes fromLeft{
-  from {left: -50px} 
-  to {left: 0}
+@keyframes fromLeft {
+  from {
+    left: -50px;
+  }
+  to {
+    left: 0;
+  }
 }
 
 img {
-  width: 100%;
-  height: 100%;
-  display: none;
   animation: fade 1.5s;
+  display: none;
+  height: 100%;
+  width: 100%;
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .prev,
@@ -105,13 +114,119 @@ img {
 }
 
 .next {
-  right: 0;
   border-radius: 3px 0 0 3px;
+  right: 0;
 }
 
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+.musicBox {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.play {
+  background-color: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-size: 64px;
+}
+
+.play:hover {
+  color: white;
+}
+
+.author {
+  display: none;
+  font-size: 32px;
+  color: white;
+  text-align: center;
+}
+
+.waves {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.wave {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 10px;
+  height: 100px;
+  border-radius: 5px;
+  transform-origin: bottom;
+}
+
+.wavesAnimation {
+  animation: waves 1.5s linear infinite;
+  background-color: white;
+}
+
+@keyframes waves {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.wave:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.wave:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.wave:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.wave:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.wave:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.wave:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.wave:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.wave:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.wave:nth-child(10) {
+  animation-delay: 0.9s;
+}
+.wave:nth-child(11) {
+  animation-delay: 1s;
+}
+.wave:nth-child(12) {
+  animation-delay: 1.1s;
+}
+.wave:nth-child(13) {
+  animation-delay: 1.2s;
+}
+.wave:nth-child(14) {
+  animation-delay: 1.3s;
+}
+.wave:nth-child(15) {
+  animation-delay: 1.4s;
+}
+.wave:nth-child(16) {
+  animation-delay: 1.5s;
 }
 
 footer {
@@ -133,9 +248,9 @@ footer > p {
   }
 
   main {
-    flex-direction: column;
-    align-items: center;
     align-content: space-around;
+    align-items: center;
+    flex-direction: column;
     gap: 30px;
   }
 
@@ -151,9 +266,26 @@ footer > p {
     height: 450px;
   }
 
-  @keyframes fromLeft{
-    from {left: -30px} 
-    to {left: 0}
+  @keyframes fromLeft {
+    from {
+      left: -30px;
+    }
+    to {
+      left: 0;
+    }
+  }
+
+  .author {
+    font-size: 24px;
+  }
+
+  .waves {
+    gap: 7px;
+  }
+
+  .wave {
+    width: 7px;
+    height: 80px;
   }
 
   footer > p {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Odliczamy do imprezy sylwestrowej">
+    <meta name="description" content="Odliczamy do imprezy sylwestrowej" />
     <title>Odliczanie do Sylwestra</title>
 
     <link rel="stylesheet" href="styles/style.css" />
@@ -16,8 +16,9 @@
       rel="stylesheet"
     />
 
-    <script defer src="scripts/timer.js" type="module"></script>
-    <script defer src="scripts/slider.js" type="module"></script>
+    <script defer src="scripts/timer.js"></script>
+    <script defer src="scripts/slider.js"></script>
+    <script defer src="scripts/audio.js"></script>
   </head>
   <body>
     <header>
@@ -29,25 +30,25 @@
           <h2>Galeria</h2>
         </header>
         <div class="block">
-          <img src="images/img1.jpg"/>
-          <img src="images/img2.jpg"/>
-          <img src="images/img3.jpg"/>
-          <img src="images/img4.jpg"/>
-          <img src="images/img5.jpg"/>
-          <img src="images/img6.jpg"/>
-          <img src="images/img7.jpg"/>
-          <img src="images/img8.jpg"/>
-          <img src="images/img9.jpg"/>
-          <img src="images/img10.jpg"/>
-          <img src="images/img11.jpg"/>
-          <img src="images/img12.jpg"/>
-          <img src="images/img13.jpg"/>
-          <img src="images/img14.jpg"/>
-          <img src="images/img15.jpg"/>
-          <img src="images/img16.jpg"/>
-          <img src="images/img17.jpg"/>
-          <img src="images/img18.jpg"/>
-          <img src="images/img19.jpg"/>
+          <img src="images/img1.jpg" />
+          <img src="images/img2.jpg" />
+          <img src="images/img3.jpg" />
+          <img src="images/img4.jpg" />
+          <img src="images/img5.jpg" />
+          <img src="images/img6.jpg" />
+          <img src="images/img7.jpg" />
+          <img src="images/img8.jpg" />
+          <img src="images/img9.jpg" />
+          <img src="images/img10.jpg" />
+          <img src="images/img11.jpg" />
+          <img src="images/img12.jpg" />
+          <img src="images/img13.jpg" />
+          <img src="images/img14.jpg" />
+          <img src="images/img15.jpg" />
+          <img src="images/img16.jpg" />
+          <img src="images/img17.jpg" />
+          <img src="images/img18.jpg" />
+          <img src="images/img19.jpg" />
           <a class="prev">&#10094;</a>
           <a class="next">&#10095;</a>
         </div>
@@ -56,11 +57,40 @@
         <header>
           <h2>MusicBox</h2>
         </header>
-        <div class="block">Music</div>
+        <div class="block musicBox">
+          <button class="play">▶</button>
+          <div class="author">
+            <p>Muzyka z <a href="https://mixkit.co/free-stock-music/" target="_blank">mixkit.co</a></p>
+            <br>
+            <p>C.B.P.D</p>
+            <p>by Arulo</p>
+          </div>
+          <div class="waves">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+          </div>
+        </div>
       </section>
     </main>
     <footer>
       <p>Dzięki za wizytę &copy; Ojci3c</p>
     </footer>
+    <audio id="audio" loop>
+      <source src="music/mixkit-cbpd-400.mp3" type="audio/mp3" />
+    </audio>
   </body>
 </html>
