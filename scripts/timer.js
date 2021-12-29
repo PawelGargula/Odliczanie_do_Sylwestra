@@ -17,15 +17,15 @@ let timer = setInterval(function () {
     seconds = seconds.toString().padStart(2, '0');
 
     if (days < 1 && hours < 1 && minutes < 1)
-        header.innerText, document.title = seconds;
+        header.innerText = seconds;
     else if (days < 1 && hours < 1)
-        header.innerText = minutes + ":" + seconds;
+        header.innerText = `${minutes}:${seconds}`;
     else if (days < 1)
-        header.innerText = hours + ":" + minutes + ":" + seconds;
+        header.innerText = `${hours}:${minutes}:${seconds}`;
     else if (days == 1)
-        header.innerText = days + " dzień | " + hours + ":" + minutes + ":" + seconds;
+        header.innerText = `${days} dzień | ${hours}:${minutes}:${seconds}`;
     else
-        header.innerText = days + " dni | " + hours + ":" + minutes + ":" + seconds;
+        header.innerText = `${days} dni | ${hours}:${minutes}:${seconds}`;
     if (distance < 0) {
         clearInterval(timer);
         header.innerText = "Lecymy tur!";
