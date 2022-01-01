@@ -1,6 +1,6 @@
-let header = document.querySelector('h1');
+const header = document.querySelector('h1');
 
-let countDownDate = new Date("Dec 31, 2021 00:00:00").getTime();
+const countDownDate = new Date("Dec 31, 2022 00:00:00").getTime();
 
 let timer = setInterval(function () {
     let now = new Date().getTime();

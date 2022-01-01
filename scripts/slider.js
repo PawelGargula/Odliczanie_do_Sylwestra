@@ -1,5 +1,5 @@
-let prev = document.querySelector(".prev");
-let next = document.querySelector(".next");
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
 
 let imageIndex = 1;
 
@@ -27,17 +27,17 @@ function plusImages(n) {
     showImages(imageIndex += n);
 }
 
-function showImages(number) {
-    let images = document.querySelectorAll("img");
+function showImages(index) {
+    const images = document.querySelectorAll("img");
 
-    if (number > images.length)
+    if (index > images.length)
         imageIndex = 1;
 
-    if (number < 1)
+    if (index < 1)
         imageIndex = images.length;
 
-    images.forEach(element => {
-        element.style.display = "none";
+    images.forEach(image => {
+        image.style.display = "none";
     });
 
     images[imageIndex-1].style.display = "block";  
