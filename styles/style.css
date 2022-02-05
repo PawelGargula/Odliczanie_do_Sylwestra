@@ -149,6 +149,10 @@ img {
   text-align: center;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .waves {
   position: absolute;
   bottom: 30px;
