@@ -149,6 +149,14 @@ img {
   text-align: center;
 }
 
+q::after {
+  content: "";
+}
+
+q::before {
+  content: "";
+}
+
 a:hover {
   text-decoration: none;
 }
