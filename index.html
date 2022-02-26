@@ -56,14 +56,24 @@
       <header>
         <h2>MusicBox</h2>
       </header>
-      <div class="block musicBox">
-        <button class="play">▶</button>
-        <div class="author">
-          <p>Muzyka z <a href="https://mixkit.co/free-stock-music/" target="_blank" title="Mixkit page">mixkit</a></p>
-          <br>
-          <blockquote cite="https://mixkit.co/free-stock-music/"><cite title="Title of played song">C.B.P.D</cite></blockquote>
-          <p>by <q cite="https://mixkit.co/free-stock-music/"><cite title="Author of played song">Arulo</cite></q></p>
+      <figure class="block musicBox">
+        <div>
+          <q cite="https://mixkit.co/free-stock-music/"><cite title="Title of played song">C.B.P.D</cite>
+          </q>
+          <p>by <q cite="https://mixkit.co/free-stock-music/"><cite title="Author of played song">Arulo</cite></q>
+          </p>
         </div>
+
+        <audio controls src="music/mixkit-cbpd-400.mp3" preload="auto">
+          <p>Your browser does not support the
+            <code>audio</code> element.
+          </p>
+        </audio>
+        
+        <figcaption>
+          Muzyka z <a href="https://mixkit.co/free-stock-music/" target="_blank" title="Mixkit page">mixkit</a>
+        </figcaption>
+
         <div class="waves">
           <div class="wave"></div>
           <div class="wave"></div>
@@ -82,15 +92,12 @@
           <div class="wave"></div>
           <div class="wave"></div>
         </div>
-      </div>
+      </figure>
     </section>
   </main>
   <footer>
     <p>Dzięki za wizytę &copy; Ojci3c</p>
   </footer>
-  <audio id="audio" loop>
-    <source src="music/mixkit-cbpd-400.mp3" type="audio/mp3" />
-  </audio>
 </body>
 
 </html>
