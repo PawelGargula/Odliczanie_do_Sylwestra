@@ -1,1 +1,2 @@
 Improve music box, allow user to stop music and change its volume.
+Add bottom shadow on side header
