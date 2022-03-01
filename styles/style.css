@@ -43,10 +43,6 @@ main {
   flex-wrap: wrap;
 }
 
-section {
-  width: 400px;
-}
-
 h2 {
   font-size: 20px;
   font-weight: 400;
@@ -262,10 +258,6 @@ footer > p {
     align-items: center;
     flex-direction: column;
     gap: 30px;
-  }
-
-  section {
-    width: 300px;
   }
 
   h2 {
